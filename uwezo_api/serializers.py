@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Partner, Vehicle, Driver, Tracker
+from .models import Partner, Vehicle, Driver, Tracker, Contract
 
 from rest_framework import serializers
 from .models import Partner, Vehicle, Driver, Insurer
@@ -27,4 +27,9 @@ class InsurerSerializer(serializers.ModelSerializer):
 class TrackerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tracker
+        fields = '__all__'
+
+class ContractSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Contract
         fields = '__all__'

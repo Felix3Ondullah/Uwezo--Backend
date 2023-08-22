@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Partner, Vehicle, Insurer, Driver , Tracker
-from .serializers import TrackerSerializer, PartnerSerializer, VehicleSerializer,InsurerSerializer, DriverSeializer
+from .models import Partner, Vehicle, Insurer, Driver , Tracker, Contract
+from .serializers import  ContractSerializer, TrackerSerializer, PartnerSerializer, VehicleSerializer,InsurerSerializer, DriverSeializer
 from rest_framework import mixins
 from rest_framework import viewsets
 
@@ -26,4 +26,8 @@ class DriverViewSets(viewsets.GenericViewSet, mixins.UpdateModelMixin,mixins.Des
 class TrackerViewSets(viewsets.GenericViewSet, mixins.UpdateModelMixin,mixins.DestroyModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.ListModelMixin):
     queryset = Tracker.objects.all()
     serializer_class = TrackerSerializer
+
+class ContractViewSets(viewsets.GenericViewSet, mixins.UpdateModelMixin,mixins.DestroyModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.ListModelMixin):
+    queryset = Contract.objects.all()
+    serializer_class = ContractSerializer
  
