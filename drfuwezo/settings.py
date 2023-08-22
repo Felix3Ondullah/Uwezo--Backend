@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #myapps
     'rest_framework',
-    'uwezo_api',
+    'uwezo_api'
 
 ]
 
