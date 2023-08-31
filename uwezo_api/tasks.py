@@ -69,10 +69,6 @@ def generate_invoice():
     return "Invoice generation successful"
 
 
-from django.utils import timezone
-from celery import shared_task
-
-# Import relevant models and logger here
 
 # Shared task to process a full payment
 @shared_task
