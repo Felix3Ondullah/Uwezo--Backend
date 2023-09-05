@@ -1,8 +1,7 @@
 from rest_framework import serializers
-from .models import Partner, Vehicle, Driver, Tracker, Contract
+from .models import  Transaction, Invoice, Partner, Vehicle, Driver, Tracker, Contract, Insurer, MobilePayment, Account
 
-from rest_framework import serializers
-from .models import Partner, Vehicle, Driver, Insurer
+
 
 class PartnerSerializer(serializers.ModelSerializer):
     class Meta:
@@ -32,4 +31,24 @@ class TrackerSerializer(serializers.ModelSerializer):
 class ContractSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contract
+        fields = '__all__'
+
+class MobilePaymentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MobilePayment
+        fields = '__all__'
+
+class AccountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Account
+        fields = '__all__'
+
+class InvoiceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Invoice
+        fields = '__all__'
+
+class TransactionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Transaction
         fields = '__all__'
