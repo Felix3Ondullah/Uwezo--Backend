@@ -97,7 +97,7 @@ DATABASES = {
         'NAME': 'uwezodb', 
         'USER': 'felix', 
         'PASSWORD': 'password',
-        'HOST': '35.227.55.58', 
+        'HOST': '127.0.0.1'', 
         'PORT': '5432',
     }
 }
