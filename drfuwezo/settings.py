@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 from celery.schedules import crontab
 from django.utils import timezone
@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-l621sxyji7!wxm#sjueo!^t(o)4a+9)+^izh+@-g67o5wioq&3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['35.227.55.58']
+ALLOWED_HOSTS = ['35.227.55.58', 'localhost']
 
 
 # Application definition
@@ -158,7 +158,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
