@@ -341,7 +341,7 @@ class MobilePayment(models.Model):
 	invoice = models.ForeignKey('Invoice', on_delete=models.CASCADE)
 	receipt = models.CharField(max_length=16)
 	transaction_date = models.DateTimeField(auto_now=False, auto_now_add=False)
-	status = models.CharField(max_length=16, choices=RECEIPT_STATUS, default=PENDING)
+	status = models.CharField(max_length=16, choices=RECEIPT_STATUS, default= PENDING)
 	split = models.BooleanField(default=False)
 	index = models.PositiveSmallIntegerField()
 	amount = models.PositiveIntegerField()
