@@ -33,7 +33,7 @@ MILITARY_ID = 'military_id'
 DOCUMENT_TYPE = [
 	(NATIONAL_ID, ('National ID')),
 	(PASSPORT, ('Passport')),
-	(MILITARY_ID, ('Miliary ID')),
+	(MILITARY_ID, ('Military ID')),
 ]
 
 
@@ -103,7 +103,7 @@ class Driver(models.Model):
 	create_date = models.DateTimeField(auto_now_add=True)
 	update_date = models.DateTimeField(auto_now=True)
 	partner = models.ForeignKey('Partner', on_delete=models.CASCADE, null=True)
-	id_document = models.FileField(upload_to='id_documents/', max_length=100, null=True, blank=True, help_text="Upload an ID document (PDF or image, max 5MB)")
+	#id_document = models.FileField(upload_to='id_documents/', max_length=100, null=True, blank=True, help_text="Upload an ID document (PDF or image, max 5MB)")
 
 	def __str__(self):
 		template = '{0.first_name} {0.last_name}'
