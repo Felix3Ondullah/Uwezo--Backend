@@ -57,7 +57,7 @@ class Partner(models.Model):
 	middle_name = models.CharField(max_length=16, null=True, blank=True)
 	last_name = models.CharField(max_length=16)
 	date_of_birth = models.DateField(auto_now=False, auto_now_add=False, null=True, blank=True)
-	document_type = models.CharField(max_length=16, choices=DOCUMENT_TYPE, default=NATIONAL_ID, null=True, blank=True)
+	document_type = models.CharField(max_length=32, choices=DOCUMENT_TYPE, default=NATIONAL_ID, null=True, blank=True)
 	document_number = models.CharField(max_length=8, null=True, blank=True)
 	msisdn = models.PositiveBigIntegerField( help_text="Kenyan mobile number in the format +254XXXXXXXXX")
 	email = models.EmailField(max_length=255)
