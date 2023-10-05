@@ -1,4 +1,4 @@
-#!/opt/apps/ondullah/Uwezo/myenv/bin/python3
+#!/home/ondullah/Projects/UWEZOBACKEND/Uwezo/myenv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
